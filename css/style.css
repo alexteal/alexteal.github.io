@@ -1,0 +1,16 @@
+body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+nav {
+    color: Blue;
+    display: flex;
+    flex-direction: row-reverse;
+}
+nav:visited {
+    display: flex;
+    flex-direction: row-reverse;
+    color: Purple;
+}
