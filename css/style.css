@@ -1,16 +1,84 @@
+* {
+    font-family: sans-serif;
+}
+.card {
+    border: 1px solid #000000; /* Thin border */
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px; /* Space inside the card */
+    margin: 10px; /* Space around the card */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+}
+.flex {
+    display: flex;
+}
+.flex-left {
+    display: flex;
+    justify-content: left;
+}
+.flex-right {
+    display: flex;
+    justify-content: right;
+}
+h1 {
+    font-family: sans-serif;
+}
 body {
+    /*
+     * Remove default page margins for the entire body element.
+     */
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
 }
 nav {
+    /*
+     * style nav to differentiate it from the rest of the page (at least 2 properties ie. background-color …)
+     * make nav a flex parent (set to display flex) and justify the children right
+     */
     color: Blue;
+    font-style: italic;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: right;
 }
 nav:visited {
-    display: flex;
-    flex-direction: row-reverse;
     color: Purple;
+}
+@keyframes a_hover {
+    from {
+        color: Blue;
+    }
+    to {
+        color: Purple;
+    }
+}
+a {
+    /*
+     * style anchor tag  in nav  (at least 2 properties) and a suitable hover state
+     */
+    text-decoration: none;
+    font-family: Serif;
+}
+
+a:hover {
+    /*
+     *... suitable hover state
+     */
+    animation-name: a_hover;
+    animation-duration: 1s;
+}
+footer {
+    /*style footer to differentiate it from the rest of the page (at least 2 properties ie. background-color …)
+     */
+    background-color: white;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-color: Black;
+    /*make footer a flex parent (set to display flex) and justify the children center*/
+    display: flex;
+    justify-content: center;
+    a {
+        color: Black;
+        text-decoration: none;
+    }
 }
