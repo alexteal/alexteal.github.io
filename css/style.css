@@ -1,12 +1,35 @@
 * {
     font-family: sans-serif;
 }
+.color-background-white {
+    background-color: white;
+}
+.color-background-highlight {
+    background-color: #83b692;
+}
+.color-border-highlight {
+    border-color: #83b692;
+}
+.color-background-primary {
+    background-color: #f9ada0;
+}
+.color-foreground-primary {
+    color: #f9ada0;
+}
+.color-background-base {
+    /*background-color: #5b3758;*/
+    /*background-color: #B285AD;*/
+    background-color: #FCFCFC;
+}
 .card {
     border: 1px solid #000000; /* Thin border */
     border-radius: 10px; /* Rounded edges */
     padding: 20px; /* Space inside the card */
     margin: 10px; /* Space around the card */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6); /* Optional: Shadow effect */
+}
+.card:hover {
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
 }
 .flex {
     display: flex;
@@ -19,8 +42,18 @@
     display: flex;
     justify-content: right;
 }
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 h1 {
-    font-family: sans-serif;
+    font-size: 200%;
+}
+h2 {
+    font-size: 150%;
+}
+h3 {
+    font-size: 100%;
 }
 body {
     /*
@@ -57,7 +90,6 @@ a {
      * style anchor tag  in nav  (at least 2 properties) and a suitable hover state
      */
     text-decoration: none;
-    font-family: Serif;
 }
 
 a:hover {
@@ -80,5 +112,10 @@ footer {
     a {
         color: Black;
         text-decoration: none;
+    }
+}
+@media (max-width: 700px) {
+    .flex-left {
+        flex-direction: column;
     }
 }
