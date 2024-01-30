@@ -1,25 +1,61 @@
 * {
     font-family: sans-serif;
 }
+/*Color Palette
+ * Primary
+ * #FCECEC
+ * Secondary
+ * #3BB273
+ * Alert
+ * #E15554
+ * Contrast
+ * #5D5D81
+ * Highlight
+ * #E1BC29
+ */
 .color-background-white {
-    background-color: white;
+    background-color: #fcecec;
+}
+.color-background-secondary {
+    background-color: #3bb273;
 }
 .color-background-highlight {
-    background-color: #83b692;
+    border-color: #e1bc29;
 }
 .color-border-highlight {
-    border-color: #83b692;
+    border-color: #e1bc29;
 }
 .color-background-primary {
-    background-color: #f9ada0;
+    background-color: #fcecec;
 }
 .color-foreground-primary {
-    color: #f9ada0;
+    color: #fcecec;
+}
+.color-border-secondary {
+    border-style: solid;
+    border-right-width: 2rem;
 }
 .color-background-base {
     /*background-color: #5b3758;*/
     /*background-color: #B285AD;*/
-    background-color: #FCFCFC;
+    background-color: #fcfcfc;
+}
+.card-secondary-3d {
+    /*Hey GPT! modify this. I want a border that's 3 units wide on the right, and 3 units wide on the bottom. Style the color of the border to be the secondary color on the color palette. This should have a sort of 3d affect to it. */
+    border: 1px solid #000000; /* Thin border */
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px; /* Space inside the card */
+    margin: 10px; /* Space around the card */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6); /* Optional: Shadow effect */
+}
+.card-borderless {
+    padding: 20px; /* Space inside the card */
+    margin: 10px; /* Space around the card */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6); /* Optional: Shadow effect */
+}
+.card-borderless:hover {
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
 }
 .card {
     border: 1px solid #000000; /* Thin border */
@@ -42,9 +78,21 @@
     display: flex;
     justify-content: right;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+.flex-grow-expand {
+    display: flex;
+    flex-grow: 1;
+}
+.flex-grow-contract {
+    display: flex;
+    flex-grow: 0;
 }
 h1 {
     font-size: 200%;

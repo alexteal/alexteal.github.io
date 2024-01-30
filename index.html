@@ -1,4 +1,55 @@
 <<!doctype html>
+<!--
+
+
+really cool animation carter made: 
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+
+  
+  max-height: 100%;
+
+  background-image: url('/wave.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+@keyframes moveGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 3em 3em;
+  }
+}
+
+.grid {
+  width: 140%;
+  height: 140%;
+  transform: rotate(-20deg) translate(0px, -100px) scale(500%);
+
+  background-repeat: repeat;
+  background-image: linear-gradient(rgba(255, 255, 255, .7) .04em, transparent .04em), linear-gradient(90deg, rgba(255, 255, 255, .7) .04em, transparent .04em);
+  background-size: .75em .75em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  animation: moveGrid 20s linear infinite;
+}
+
+
+
+    --->
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -13,12 +64,12 @@
         <section class="flex-left">
             <div class="flex-column">
                 <div
-                    class="card color-background-primary color-border-highlight"
+                    class="color-border-secondary card color-background-primary"
                 >
                     <h1>Alex Teal</h1>
                     <h2>Over-Caffeinated (soon to be) Software Engineer</h2>
                 </div>
-                <div class="card color-background-primary">
+                <div class="card color-background-secondary">
                     <h2>Hey ya'll</h2>
                     <p>
                         I'm a CS major here at UGA, and I like to build UNIX
@@ -26,11 +77,13 @@
                     </p>
                 </div>
             </div>
-            <div class="card color-background-primary">
-                <img
-                    src="./images/walter_small.jpeg"
-                    alt="Image of the author"
-                />
+            <div class="flex-center flex-grow-expand">
+                <div class="card-borderless color-background-primary">
+                    <img
+                        src="./images/walter_small.jpeg"
+                        alt="Image of the author"
+                    />
+                </div>
             </div>
         </section>
         <hr />
