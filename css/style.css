@@ -4,18 +4,27 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 body {
-    font-family: "Roboto", sans-serif; /* apply fonts to selected elements */
-    color: #333; /* set font color */
-    font-size: 16px; /* set font size */
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    font-size: 16px;
 }
 h1,
 h2,
 h3 {
-    font-family: "Roboto", sans-serif; /* apply fonts to selected elements */
-    color: #333; /* set font color */
-    font-size: 24px; /* set font size */
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    font-size: 24px;
 }
-
+:root {
+    --primary: #fcecec;
+    --secondary: #3bb273;
+    --secondary-light: #a3f2c9;
+    --alert: #e15554;
+    --contrast: #5d5d81;
+    --highlight: #e1bc29;
+    --tertiary: #86bbbd;
+    --quarternary: #f26e8d;
+}
 /*Color Palette
  * Primary
  * #FCECEC
@@ -30,27 +39,29 @@ h3 {
  */
 
 .color-background-white {
-    background-color: #fcecec;
+    background-color: var(--primary);
 }
 
 .color-background-secondary {
-    background-color: #3bb273;
+    background-color: var(--secondary);
 }
-
+.color-background-tertiary {
+    background-color: var(--tertiary);
+}
 .color-background-highlight {
-    border-color: #e1bc29;
+    border-color: var(--highlight);
 }
 
 .color-border-highlight {
-    border-color: #e1bc29;
+    border-color: var(--highlight);
 }
 
 .color-background-primary {
-    background-color: #fcecec;
+    background-color: var(--primary);
 }
 
 .color-foreground-primary {
-    color: #fcecec;
+    color: var(--primary);
 }
 
 .color-border-secondary {
@@ -65,12 +76,24 @@ h3 {
 }
 
 .card-secondary-3d {
-    border-right: 3px solid var(--secondary-color);
-    border-bottom: 3px solid var(--secondary-color);
+    position: relative;
+    border: 1px solid var(--contrast);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    box-shadow:
+        inset 0 0 0 1px var(--contrast),
+        0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    background-color: var(--primary);
+    transition: 0.2s;
+    border-width: 1px 5px 5px;
+    border-color: var(--contrast);
+    border-top-style: none;
+    border-left-style: none;
+}
+.card-secondary-3d:hover {
+    border-color: var(--secondary-light);
+    box-shadow: none;
 }
 
 .card-borderless {
@@ -78,6 +101,8 @@ h3 {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    border-color: red;
+    transition: 0.2s;
 }
 
 .card-borderless:hover {
@@ -128,6 +153,52 @@ h3 {
 .flex-grow-contract {
     display: flex;
     flex-grow: 0;
+}
+
+.three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.section-brenda {
+    /*top*/
+    background-color: var(--tertiary);
+}
+
+.section-alex {
+    /*bottom*/
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--tertiary);
+}
+
+.img-container-small {
+    width: 40rem;
+    height: 5rem;
+    height: auto;
+    margin: 3px;
+    padding: 3px;
+}
+
+.one-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+ul,
+dl,
+dt,
+dd {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -226,8 +297,13 @@ footer a:hover {
 }
 
 section {
-    background-color: #fcfcfc;
+    background-color: var(--primary);
     padding: 20px;
+}
+
+hr {
+    background-color: var(--contrast);
+    color: var(--contrast);
 }
 
 @media (max-width: 700px) {
