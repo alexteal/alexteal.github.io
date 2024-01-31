@@ -93,7 +93,9 @@ h3 {
 }
 .card-secondary-3d:hover {
     border-color: var(--secondary-light);
-    box-shadow: none;
+    box-shadow:
+        inset 0 0 0 1px var(--secondary-light),
+        0 2px 2px 0 rgba(0, 0, 0, 0.6);
 }
 
 .card-borderless {
